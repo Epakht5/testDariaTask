@@ -16,6 +16,7 @@ public class BaseTest {
 
     @AfterEach
     public void tearDown(){
+        SingletonDriver.getInstance().getDriver().close();
         SingletonDriver.quitDriver();
     }
 }
